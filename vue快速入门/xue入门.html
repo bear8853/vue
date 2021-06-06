@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:binding="http://www.w3.org/1999/xhtml"
+      xmlns:v-binding="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue入门</title>
+
+   <!-- # vm代表vue的实例对象,内部包括dom监听和数据绑定
+    # v 代表 view-->
+</head>
+<body>
+<div id="app">
+    <!--<input type="text" v-model="username"/>
+    <p>我们就从这里开始学习吧! {{username.toUpperCase()}}</p>
+    <p v-html="username.toUpperCase()"></p>-->
+    <img :src="imgUrl">
+
+    <button v-on:click="test">高雄</button>
+</div>
+
+
+<script type="text/javascript" src="../js/vue.js" ></script>
+
+<script type="text/javascript">
+
+    const app = new Vue(
+        {
+            el:"#app",
+            data:{
+                // message:'我们就从这里开始学习吧! Vue!'
+                // username:'system.out.print!',
+                imgUrl:'D:\\MKG_HappyBirthday_WallpaperUpdate_14628_LOZ-wallpaper-1280x1024.png'
+            },
+            methods:{
+                test(string) {
+                    alert("高雄的中心")
+                }
+            }
+        }
+    )
+
+
+</script>
+</body>
+</html>

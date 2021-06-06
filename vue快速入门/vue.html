@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xue</title>
+    <div id="test">
+        <input type="text" v-model ="name">
+        <p>保号 {{name}}</p>
+        <input type="number" v-model = "age">
+        <p>年龄 {{age}}</p>
+
+
+    </div>
+</head>
+<body>
+<a src=""></a>
+
+<script  type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+
+     new Vue({
+        el:'#test',
+        data: {
+            name:'张高雄',
+            age:32
+
+        }
+    });
+</script>
+</body>
+</html>

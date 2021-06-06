@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        .ok {
+            color: green;
+            border: 1px solid green;
+        }
+        .error {
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        //校验账号的格式
+        function check_code() {
+            console.log(1);
+            //获取账号
+            var code =
+                document.getElementById("code").value;
+            //校验其格式(\w字母或数字或下划线)
+            var span =
+                document.getElementById("code_msg");
+            var reg = /^\w{6,10}$/;
+            if(reg.test(code)) {
+                //通过，增加ok样式
+                span.className = "ok";
+            } else {
+                //不通过，增加error样式
+                // span.className = "error";
+
+                alert("用户名格式不正确")
+            }
+        }
+        function check_pwd(){
+            console.log(2);
+            var code2 =document.getElementById("pwd").value;
+            var span2 =
+                document.getElementById("pwd_msg");
+            var reg2 = /^\w{6,10}$/;
+            if(reg2.test(code2)) {
+                span2.className = "ok";
+            } else {
+                alert("密码格式不正确") ;
+            }
+
+        }
+    </script>
+</head>
+<body>
+<form action="http://www.tmooc.cn">
+    <p>
+        账号：
+        <input type="text" id="code" onblur="check_code()"/>
+        <span id="code_msg">6-10位字母、数字、下划线</span>
+    </p>
+    <p>
+        密码：
+        <input type="text" id="pwd" onblur="check_pwd()" />
+        <span id="pwd_msg">8-20位字母、数字、下划线</span>
+    </p>
+    <p><input type="submit" value="登录"/></p>
+</form>
+</body>
+</html>
