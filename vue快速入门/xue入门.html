@@ -10,9 +10,9 @@
 </head>
 <body>
 <div id="app">
-    <!--<input type="text" v-model="username"/>
+    <input type="text" v-model="username"/>
     <p>我们就从这里开始学习吧! {{username.toUpperCase()}}</p>
-    <p v-html="username.toUpperCase()"></p>-->
+    <p v-html="username.toUpperCase()"></p>
     <img :src="imgUrl">
 
     <button v-on:click="test">高雄</button>
@@ -27,8 +27,8 @@
         {
             el:"#app",
             data:{
-                // message:'我们就从这里开始学习吧! Vue!'
-                // username:'system.out.print!',
+                message:'我们就从这里开始学习吧! Vue!',
+                username:'system.out.print!',
                 imgUrl:'D:\\MKG_HappyBirthday_WallpaperUpdate_14628_LOZ-wallpaper-1280x1024.png'
             },
             methods:{
